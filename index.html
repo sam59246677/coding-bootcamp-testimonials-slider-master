@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/favicon-32x32.png"
-        />
-        <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="container"></div>
-        <script src="script.js"></script>
-    </body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="slider-content">
+        <p class="slider-text"></p>
+
+        <p class="slider-author">
+          <span class="author-name"></span>
+          <span class="author-job"></span>
+        </p>
+      </section>
+
+      <section class="slider-hero">
+        <img class="hero-img" alt="testimonial author" />
+
+        <div class="buttons">
+          <button class="prev-btn" aria-label="Previous testimonial">
+            <img src="./images/icon-prev.svg" alt="" />
+          </button>
+          <button class="next-btn" aria-label="Next testimonial">
+            <img src="./images/icon-next.svg" alt="" />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

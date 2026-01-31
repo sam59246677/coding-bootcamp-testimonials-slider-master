@@ -1,154 +1,106 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    position: relative;
-    padding: 40px 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
 }
+
 body::after {
-    content: "";
-    width: 600px;
-    height: 150px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(./images/pattern-curve.svg);
-    background-repeat: no-repeat;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 150px;
+  background: url("./images/pattern-curve.svg") no-repeat;
+  z-index: -1;
 }
+
 .container {
-    display: flex;
-    max-width: 1050px;
-    align-items: center;
-    gap: 60px;
+  max-width: 1050px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
+
 .slider-text {
-    font-size: 30px;
-    color: #202046;
-    font-weight: 300;
-    margin-bottom: 30px;
-    position: relative;
-    line-height: 1.4;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #202046;
+  margin-bottom: 30px;
+  position: relative;
 }
+
 .slider-text::before {
-    position: absolute;
-    content: "";
-    width: 120px;
-    height: 100px;
-    z-index: -1;
-    top: -70px;
-    left: 0;
-    background-image: url(./images/pattern-quotes.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 120px;
+  height: 100px;
+  background: url("./images/pattern-quotes.svg") no-repeat center / contain;
+  z-index: -1;
 }
+
 .slider-author {
-    font-size: 20px;
+  font-size: 20px;
 }
+
 .author-name {
-    color: #202046;
-    font-weight: 800;
+  font-weight: 800;
+  color: #202046;
 }
+
 .author-job {
-    color: #babacf;
-    margin-left: 5px;
+  color: #babacf;
+  margin-left: 5px;
 }
+
+.slider-hero {
+  position: relative;
+}
+
+.slider-hero::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: url("./images/pattern-bg.svg") no-repeat center / contain;
+  top: -120px;
+  left: -120px;
+  z-index: -1;
+}
+
 .hero-img {
-    width: 450px;
-    height: 450px;
-    object-fit: cover;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 10px;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
 }
-.slider_hero {
-    position: relative;
+
+.buttons {
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  display: flex;
+  gap: 10px;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 30px;
 }
-.slider_hero::before {
-    content: "";
-    width: 650px;
-    height: 650px;
-    display: block;
-    background-image: url(./images/pattern-bg.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -120px;
-    top: -120px;
-    z-index: -1;
-}
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 75px;
-    height: 40px;
-    padding: 10px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: none;
-    position: absolute;
-    bottom: -20px;
-    left: 40px;
-    background: #fff;
-}
-@media (max-width: 1100px) {
-    .container {
-        flex-direction: column-reverse;
-        max-width: 100%;
-        text-align: center;
-        gap: 40px;
-        margin-top: 0;
-        height: 600px;
-    }
-    .slider-text {
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-    .slider-text::before {
-        width: 80px;
-        height: 60px;
-        top: -40px;
-        left: calc(50% - 40px);
-    }
-    .slider-author {
-        font-size: 16px;
-    }
-    .hero-img {
-        width: 260px;
-        height: 260px;
-    }
-    .slider_hero::before {
-        width: 300px;
-        height: 300px;
-        left: -60px;
-        top: -60px;
-    }
-    body::after {
-        width: 250px;
-        height: 120px;
-    }
-    .button {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-@media (max-width: 480px) {
-    .hero-img {
-        width: 220px;
-        height: 220px;
-    }
-    .slider-text {
-        font-size: 18px;
-    }
-    .slider-author {
-        font-size: 14px;
-    }
+
+.buttons button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
